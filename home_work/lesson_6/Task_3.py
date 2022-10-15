@@ -26,4 +26,18 @@ def check_names():
 def sorted_names(names: list):
     print({letter[:1].upper():sorted([name for name in names if letter[:1].upper() == name[:1].upper()]) for letter in names})
 
-sorted_names(check_names())
+
+# _______________________________________________
+# sorted_names(check_names())
+#
+#
+# from itertools import groupby
+#
+#
+# def thesaurus(*args):
+#     if "" not in args:
+#         return {ch: list(names) for ch, names in groupby(sorted(args), key=lambda i: i[0]) if ch}
+#     return "Error"
+
+
+print(thesaurus("Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"))
